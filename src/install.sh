@@ -34,7 +34,7 @@ echo -e "${BLUE}public ip address: ${PUBLIC_IP_ADDR}${ENDCOLOR}"
 echo -e "${GREEN}Setting script permissions ...${ENDCOLOR}"
 chmod +x ${__dir}/*.sh
 
-bash ${__dir}/debian10-vpn.sh
+bash ${__dir}/openvpn-iinstall.sh
 
 echo -e "${GREEN}Flushing iptables ...${ENDCOLOR}"
 bash ${__dir}/iptables-flush.sh
@@ -54,8 +54,6 @@ echo -e "${GREEN}Enabling persisten iptables ...${ENDCOLOR}"
 apt-get install iptables-persistent
 
 netfilter-persistent save
-
-./debian10-vpn.sh
 
 sysctl -p
 iptables -S
