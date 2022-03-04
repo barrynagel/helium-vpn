@@ -34,7 +34,7 @@ echo -e "${BLUE}public ip address: ${PUBLIC_IP_ADDR}${ENDCOLOR}"
 echo -e "${GREEN}Setting script permissions ...${ENDCOLOR}"
 chmod +x ${__dir}/*.sh
 
-bash ${__dir}/openvpn-iinstall.sh
+bash ${__dir}/openvpn-install.sh
 
 echo -e "${GREEN}Flushing iptables ...${ENDCOLOR}"
 bash ${__dir}/iptables-flush.sh
